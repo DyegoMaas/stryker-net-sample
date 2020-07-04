@@ -6,16 +6,18 @@ namespace RiscDetectionTest
 {
     public class FaixaRiscoDoencaXTest
     {
-        [Test]
-        public void pessoa_com_20_anos_esta_na_zona_de_risco()
+        [TestCase(18)]
+        [TestCase(35)]
+        public void pessoa_com_20_anos_esta_na_zona_de_risco(int idade)
         {
-            new FaixaRiscoDoencaX().FaixaRisco(20).Should().BeTrue();
+            new FaixaRiscoDoencaX().FaixaRisco(idade).Should().BeTrue();
         }
         
-        [Test]
-        public void pessoa_com_15_anos_esta_fora_da_zona_de_risco()
+        [TestCase(17)]
+        [TestCase(36)]
+        public void pessoa_com_15_anos_esta_fora_da_zona_de_risco(int idade)
         {
-            new FaixaRiscoDoencaX().FaixaRisco(15).Should().BeFalse();
+            new FaixaRiscoDoencaX().FaixaRisco(idade).Should().BeFalse();
         }
     }
 }
