@@ -4,17 +4,19 @@ using RiscDetection;
 
 namespace RiscDetectionTest
 {
+    /// <summary>
+    /// Os testes abaixo geral um mutation score de 66,67%.
+    /// </summary>
     public class FaixaRiscoDoencaXTest
     {
-        [TestCase(18)]
-        [TestCase(35)]
+        [TestCase(27)]
         public void pessoa_com_20_anos_esta_na_zona_de_risco(int idade)
         {
             new FaixaRiscoDoencaX().FaixaRisco(idade).Should().BeTrue();
         }
         
-        [TestCase(17)]
-        [TestCase(36)]
+        [TestCase(15)]
+        [TestCase(40)]
         public void pessoa_com_15_anos_esta_fora_da_zona_de_risco(int idade)
         {
             new FaixaRiscoDoencaX().FaixaRisco(idade).Should().BeFalse();
