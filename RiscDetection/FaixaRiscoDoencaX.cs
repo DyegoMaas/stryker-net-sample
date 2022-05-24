@@ -4,7 +4,7 @@ namespace RiscDetection
     {
         public bool FaixaRisco(int idade)
         {
-            return idade > 17 && idade <= 35;
+            return idade >= 18 && idade <= 35;
         }
     }
 }
