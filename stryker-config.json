@@ -1,0 +1,16 @@
+{
+    "stryker-config":
+    {      
+        "reporters": [ "progress", "html", "json"],  
+        "project": "RiscDetection.csproj",
+        "test-projects": [
+            "./RiscDetectionTest/RiscDetectionTest.csproj"
+        ],
+        "thresholds": { "high": 90, "low": 70, "break": 0 },
+        "mutate": [
+            "**/FaixaRisco*.cs"
+        ],
+        "ignore-mutations": [],
+        "ignore-methods": ["ToString", "LogInformation", "LogError", "Append"]
+    }
+}
