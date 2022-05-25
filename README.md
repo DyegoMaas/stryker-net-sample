@@ -1,6 +1,6 @@
 # Exemplo de configuração do Stryker.NET para C#
 
-Para instalar globalmente o [Stryker para .NET Core](https://stryker-mutator.io/stryker-net/), basta rodar:
+Para instalar o [Stryker para .NET Core](https://stryker-mutator.io/stryker-net/), basta rodar:
 
 `dotnet tool install dotnet-stryker`
 
